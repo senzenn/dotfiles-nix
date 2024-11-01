@@ -1,30 +1,33 @@
 { pkgs, ... }:
 let
-  aliases = import ./nix-config/aliases.nix;
 
+  myAliases = {
+    ls = "eza --icons -l -T -L=1";
+    cat = "bat";
+    htop = "btm";
+    fd = "fd -Lu";
+    w3m = "w3m -no-cookie -v";
+    neofetch = "disfetch";
+    fetch = "disfetch";
+    gitfetch = "onefetch";
+
+    "," = "comma";
+  };
 in
 {
-  programs.tmux = {
-    enable = true;
-    # Specify the path to your custom tmux configuration file
-    extraConfig = ''
-      source-file $HOME/tmux.conf
-    '';
-  };
-
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
     enableCompletion = true;
-    shellAliases = aliases.myAliases;
+    shellAliases = myAliases;
 
     initExtra = ''
       # Zoxide initialization
       eval "$(zoxide init zsh)"
       
       # Oh My Posh initialization
-      eval "$(oh-my-posh init zsh --config $HOME/.config/poshthemes/mytheme.json)"
+      eval "$(oh-my-posh init zsh --config $HOME/.poshthemes/mytheme.omp.json)"
 
       PROMPT=" ◉ %U%F{magenta}%n%f%u@%U%F{blue}%m%f%u:%F{yellow}%~%f
        %F{green}→%f "
@@ -38,14 +41,14 @@ in
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    shellAliases = aliases.myAliases;
+    shellAliases = myAliases;
 
     initExtra = ''
       # Zoxide initialization
       eval "$(zoxide init bash)"
       
       # Oh My Posh initialization
-
+      eval "$(oh-my-posh init bash --config $HOME/.config/poshthemes/mytheme.omp.json)"
     '';
   };
 
