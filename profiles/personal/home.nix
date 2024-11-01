@@ -24,7 +24,18 @@
     syncthing
     zellij
     vscode
+tmux
+vesktop
+btop
+zoxide
+figlet
+spotify
 
+
+ # solana 
+ solana-validator
+ solana-cli
+ anchor
   ];
 
   xdg.enable = true;
