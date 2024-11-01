@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-  css
+
     neovim
     neovim-remote
     neovide

@@ -8,7 +8,7 @@ in
     enable = true;
     # Specify the path to your custom tmux configuration file
     extraConfig = ''
-      source-file $HOME/nix-config/tmux.conf
+      source-file $HOME/tmux.conf
     '';
   };
 
@@ -45,7 +45,7 @@ in
       eval "$(zoxide init bash)"
       
       # Oh My Posh initialization
-      eval "$(oh-my-posh init bash --config $HOME/.config/poshthemes/mytheme.json)"
+
     '';
   };
 
