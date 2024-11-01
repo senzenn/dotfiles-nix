@@ -70,7 +70,7 @@ in
   '';
 
   home.file.".config/poshthemes/mytheme.omp.json".text = ''
-  {
+    {
     "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
     "blocks": [
       {
@@ -186,7 +186,7 @@ in
       "template": "\ue285 "
     },
     "version": 2
-  }
+    }
   '';
 
 
