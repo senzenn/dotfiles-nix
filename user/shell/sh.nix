@@ -27,7 +27,7 @@ in
       eval "$(zoxide init zsh)"
       
       # Oh My Posh initialization
-      eval "$(oh-my-posh init zsh --config $HOME/.poshthemes/mytheme.omp.json)"
+      eval "$(oh-my-posh init zsh )"
 
       PROMPT=" ◉ %U%F{magenta}%n%f%u@%U%F{blue}%m%f%u:%F{yellow}%~%f
        %F{green}→%f "
