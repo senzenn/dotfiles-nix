@@ -6,7 +6,7 @@ in
     ../../app/terminal/alacritty.nix
     ../../app/terminal/kitty.nix
     (import ../../app/dmenu-scripts/networkmanager-dmenu.nix {
-      dmenu_command = "fuzzel -d"; inherit config lib pkgs;
+      dmenu_command = "fuzzel"; inherit config lib pkgs;
     })
     ../input/nihongo.nix
   ] ++
