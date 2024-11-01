@@ -33,7 +33,7 @@ spotify
 
 
  # solana 
- solana-validator
+
  solana-cli
  anchor
   ];
