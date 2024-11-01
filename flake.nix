@@ -22,7 +22,7 @@
         name = "SpiderMonkey"; # name/identifier
         email = "ascenzen11@gmail.com"; # email (used for certain configurations)
         dotfilesDir = "/home/spidermonkey/.dotfiles"; # absolute path of the local repo
-        theme = "horizon-dark"; # selcted theme from my themes directory (./themes/)
+        theme = "outrun-dark"; # selcted theme from my themes directory (./themes/)
         wm = "hyprland"; # Selected window manager or desktop environment; must select one in both ./user/wm/ and ./system/wm/
         # window manager type (hyprland or x11) translator
         wmType = if ((wm == "hyprland") || (wm == "plasma")) then "wayland" else "x11";
@@ -31,8 +31,8 @@
         defaultRoamDir = "Personal.p"; # Default org roam directory relative to ~/Org
         term = "kitty"; # Default terminal command;
         font = "Intel One Mono"; # Selected font
-        fontPkg = pkgs.jetbrains-mono; # Font package
-        editor = "neovim"; # Default editor;
+        fontPkg = pkgs.intel-one-mono; # Font package
+        editor = "neovide"; # Default editor;
         # editor spawning translator
         # generates a command that can be used to spawn editor inside a gui
         # EDITOR and TERM session variables must be set in home.nix or other module

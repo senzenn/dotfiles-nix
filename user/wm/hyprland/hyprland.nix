@@ -525,7 +525,7 @@ in
   home.file.".config/nwg-dock-hyprland/style.css".text = ''
     window {
       background: rgba(''+config.lib.stylix.colors.base00-rgb-r+'',''+config.lib.stylix.colors.base00-rgb-g+'',''+config.lib.stylix.colors.base00-rgb-b+'',0.0);
-      border-radius: 20px;
+      border-radius: 10px;
       padding: 4px;
       margin-left: 4px;
       margin-right: 4px;
@@ -535,7 +535,7 @@ in
     #box {
       /* Define attributes of the box surrounding icons here */
       padding: 10px;
-      background: rgba(''+config.lib.stylix.colors.base00-rgb-r+'',''+config.lib.stylix.colors.base00-rgb-g+'',''+config.lib.stylix.colors.base00-rgb-b+'',0.55);
+      background: rgba(''+config.lib.stylix.colors.base00-rgb-r+'',''+config.lib.stylix.colors.base00-rgb-g+'',''+config.lib.stylix.colors.base00-rgb-b+'',0.22);
       border-radius: 20px;
       padding: 4px;
       margin-left: 4px;
