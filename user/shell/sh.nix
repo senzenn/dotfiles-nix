@@ -63,11 +63,11 @@ in
     fzf
   ];
   # Create the directory for the Oh My Posh theme if it doesn't exist
-  home.file."config/poshthemes".source = pkgs.runCommand "create-poshthemes-dir" { } ''
+  home.file."/home/spidermonkey/.dotfiles/user/shell/poshthemes".source = pkgs.runCommand "create-poshthemes-dir" { } ''
     mkdir -p $out/config/poshthemes
   '';
 
-  home.file."config/poshthemes/mytheme.omp.json".text = ''
+  home.file."/home/spidermonkey/.dotfiles/user/shell/config/poshthemes/mytheme.omp.json".text = ''
     {
       "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
       "blocks": [
