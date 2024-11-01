@@ -12,6 +12,7 @@ let
     fetch = "disfetch";
     gitfetch = "onefetch";
     "," = "comma";
+    
   };
 in
 {

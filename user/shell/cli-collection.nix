@@ -3,6 +3,7 @@
   # Collection of useful CLI apps
   home.packages = with pkgs; [
     # Command Line
+
     disfetch lolcat cowsay
     starfetch
     cava
