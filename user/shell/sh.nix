@@ -10,6 +10,7 @@ let
     neofetch = "disfetch";
     fetch = "disfetch";
     gitfetch = "onefetch";
+
     "," = "comma";
   };
 in
@@ -47,7 +48,7 @@ in
       eval "$(zoxide init bash)"
       
       # Oh My Posh initialization
-      eval "$(oh-my-posh init bash --config $HOME/.poshthemes/mytheme.omp.json)"
+      eval "$(oh-my-posh init bash --config $HOME/.config/poshthemes/mytheme.omp.json)"
     '';
   };
 
@@ -62,6 +63,7 @@ in
     bun yarn pnpm deno
     oh-my-zsh
     oh-my-posh
+    fzf
   ];
 
   programs.direnv.enable = true;
