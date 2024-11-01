@@ -16,6 +16,7 @@
   home.stateVersion = "22.11"; # Please read the comment before changing.
 
   home.packages = with pkgs; [
+
     # Core
     zsh
     alacritty
@@ -30,7 +31,8 @@ btop
 zoxide
 figlet
 spotify
-
+python3
+pipenv
 
  # solana 
 
