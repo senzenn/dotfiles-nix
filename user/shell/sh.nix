@@ -26,12 +26,14 @@ in
       eval "$(zoxide init zsh)"
       
       # Oh My Posh initialization
-      export POSH_THEMES_PATH="$HOME/dotfiles/poshthemes"
-      mkdir -p "$POSH_THEMES_PATH"
-      oh-my-posh get theme mytheme.omp.json -d "$POSH_THEMES_PATH"
-      eval "$(oh-my-posh init zsh --config "$POSH_THEMES_PATH/mytheme.omp.json")"
+      eval "$(oh-my-posh init zsh )"
 
       PROMPT=" ◉ %U%F{magenta}%n%f%u@%U%F{blue}%m%f%u:%F{yellow}%~%f
+       %F{green}→%f "
+      RPROMPT="%F{red}▂%f%F{yellow}▄%f%F{green}▆%f%F{cyan}█%f%F{blue}▆%f%F{magenta}▄%f%F{white}▂%f"
+      [ $TERM = "dumb" ] && unsetopt zle && PS1='$ '
+      bindkey '^P' history-beginning-search-backward
+      bindkey '^N' history-beginning-search-forward
     '';
   };
 
@@ -62,12 +64,8 @@ in
     oh-my-posh
     fzf
   ];
-  # Create the directory for the Oh My Posh theme if it doesn't exist
-  home.file."/home/spidermonkey/.dotfiles/user/shell/poshthemes".source = pkgs.runCommand "create-poshthemes-dir" { } ''
-    mkdir -p $out/config/poshthemes
-  '';
-
-  home.file."/home/spidermonkey/.dotfiles/user/shell/config/poshthemes/mytheme.omp.json".text = ''
+     
+  home.file.".config/poshthemes/mytheme.omp.json".text = ''
     {
       "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
       "blocks": [
@@ -103,6 +101,7 @@ in
                 "fetch_upstream_icon": true,
                 "fetch_worktree_count": true
               },
+              "style": "diamond",
               "style": "diamond",
               "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
               "type": "git"
@@ -186,7 +185,9 @@ in
       "version": 2
     }
   '';
-
+  
+   
+           
 
   programs.direnv.enable = true;
   programs.direnv.enableZshIntegration = true;

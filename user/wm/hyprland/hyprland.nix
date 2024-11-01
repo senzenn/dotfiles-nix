@@ -6,13 +6,13 @@ in
     ../../app/terminal/alacritty.nix
     ../../app/terminal/kitty.nix
     (import ../../app/dmenu-scripts/networkmanager-dmenu.nix {
-      dmenu_command = "fuzzel"; inherit config lib pkgs;
+      dmenu_command = "fuzzel -d"; inherit config lib pkgs;
     })
     ../input/nihongo.nix
   ] ++
   (if (systemSettings.profile == "personal") then
     [ (import ./hyprprofiles/hyprprofiles.nix {
-        dmenuCmd = "fuzzel "; inherit config lib pkgs; })]
+        dmenuCmd = "fuzzel -d"; inherit config lib pkgs; })]
   else
     []);
 
@@ -105,6 +105,9 @@ in
          no_warps = false
          inactive_timeout = 30
        }
+        bind = $mainMod, W, togglefloating, # toggle the window between focus and float
+        bind = $mainMod, G, togglegroup, # toggle the window between focus and group
+        bind = Alt, Return, fullscreen, # toggle the window between focus and fullscreen
 
        bind=SUPER,code:9,exec,nwggrid-wrapper
        bind=SUPER,code:66,exec,nwggrid-wrapper
