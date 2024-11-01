@@ -105,9 +105,6 @@ in
          no_warps = false
          inactive_timeout = 30
        }
-        bind = $mainMod, W, togglefloating, # toggle the window between focus and float
-        bind = $mainMod, G, togglegroup, # toggle the window between focus and group
-        bind = Alt, Return, fullscreen, # toggle the window between focus and fullscreen
 
        bind=SUPER,code:9,exec,nwggrid-wrapper
        bind=SUPER,code:66,exec,nwggrid-wrapper
