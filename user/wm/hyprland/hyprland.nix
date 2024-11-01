@@ -12,7 +12,7 @@ in
   ] ++
   (if (systemSettings.profile == "personal") then
     [ (import ./hyprprofiles/hyprprofiles.nix {
-        dmenuCmd = "fuzzel -d"; inherit config lib pkgs; })]
+        dmenuCmd = "fuzzel "; inherit config lib pkgs; })]
   else
     []);
 
