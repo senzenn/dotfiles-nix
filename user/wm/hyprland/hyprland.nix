@@ -643,7 +643,7 @@ in
 
     input-field {
       monitor =
-      size = 200, 50
+      size = 200, 30
       outline_thickness = 3
       dots_size = 0.33 # Scale of input-field height, 0.2 - 0.8
       dots_spacing = 0.15 # Scale of dots' absolute size, 0.0 - 1.0
@@ -674,7 +674,7 @@ in
 
     label {
       monitor =
-      text = Hello, Emmet
+      text = Hello, Spider Monkey 🤭
       color = rgb(''+config.lib.stylix.colors.base07-rgb-r+'',''+config.lib.stylix.colors.base07-rgb-g+'', ''+config.lib.stylix.colors.base07-rgb-b+'')
       font_size = 25
       font_family = ''+userSettings.font+''
@@ -964,7 +964,7 @@ in
 
       window#waybar {
           background-color: rgba('' + config.lib.stylix.colors.base00-rgb-r + "," + config.lib.stylix.colors.base00-rgb-g + "," + config.lib.stylix.colors.base00-rgb-b + "," + ''0.55);
-          border-radius: 8px;
+          border-radius: 3px;
           color: #'' + config.lib.stylix.colors.base07 + '';
           transition-property: background-color;
           transition-duration: .2s;
