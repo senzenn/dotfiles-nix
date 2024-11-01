@@ -1,1 +1,0 @@
-/nix/store/68w8pwr03bn2h56ma8x7wx9kg84risi6-home-manager-files/.config/nvim/nvim.nix
