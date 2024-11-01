@@ -10,6 +10,7 @@
 
   imports = [ ../work/home.nix # Personal is essentially work system + games
               ../../user/app/games/games.nix # Various videogame apps
+              ../..user/app/Extra-dap/extra.nix
             ];
 
   home.stateVersion = "22.11"; # Please read the comment before changing.
