@@ -19,8 +19,11 @@ let
   };
 in
 {
+
   programs.zsh = {
     enable = true;
+    zsh-completions = true;
+    zsh-history = true;
     enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
     enableCompletion = true;
