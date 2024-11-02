@@ -3,7 +3,10 @@
   # Collection of useful CLI apps
   home.packages = with pkgs; [
     # Command Line
-
+zsh-history
+    zsh-f-sy-h
+    zsh-autopair
+    starship
     disfetch lolcat cowsay
     starfetch
     cava
@@ -18,6 +21,7 @@
     w3m
     pandoc
     hwinfo
+    lazygit
     pciutils
     numbat
     (pkgs.callPackage ../pkgs/pokemon-colorscripts.nix { })

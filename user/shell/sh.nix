@@ -3,7 +3,7 @@ let
 
   myAliases = {
 
-    gaa = "git add";
+    gaa = "git add .";
     gc = "git commit -m";
     gp = "git push";
     ls = "eza --icons -l -T -L=1";
@@ -22,7 +22,7 @@ in
 
   programs.zsh = {
     enable = true;
-    zsh-completions = true;
+
     zsh-history = true;
     enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
