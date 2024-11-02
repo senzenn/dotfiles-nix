@@ -23,7 +23,7 @@ in
   programs.zsh = {
     enable = true;
 
-    zsh-history = true;
+
     enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
     enableCompletion = true;
