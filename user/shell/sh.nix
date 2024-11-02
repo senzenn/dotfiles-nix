@@ -2,6 +2,10 @@
 let
 
   myAliases = {
+
+    gaa = "git add";
+    gc = "git commit -m";
+    gp = "git push";
     ls = "eza --icons -l -T -L=1";
     cat = "bat";
     htop = "btm";
@@ -11,6 +15,7 @@ let
     fetch = "disfetch";
     gitfetch = "onefetch";
     "," = "comma";
+    dog =  "phoenix sync user";
   };
 in
 {

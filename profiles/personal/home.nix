@@ -33,6 +33,7 @@ figlet
 spotify
 python3
 pipenv
+nodejs
 
  # solana 
 
