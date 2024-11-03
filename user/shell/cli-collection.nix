@@ -4,11 +4,14 @@
   home.packages = with pkgs; [
     # Command Line
 zsh-history
+
     zsh-f-sy-h
     zsh-autopair
     starship
     disfetch lolcat cowsay
     starfetch
+    starship
+
     cava
     killall
     libnotify

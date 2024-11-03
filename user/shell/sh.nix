@@ -33,8 +33,6 @@ in
       # Zoxide initialization
       eval "$(zoxide init zsh)"
       
-      # Oh My Posh initialization
-      eval "$(oh-my-posh init zsh  --config $HOME/.config/poshthemes/mytheme.omp.json)"
 
       PROMPT=" ◉ %U%F{magenta}%n%f%u@%U%F{blue}%m%f%u:%F{yellow}%~%f
        %F{green}→%f "
@@ -44,6 +42,16 @@ in
       bindkey '^N' history-beginning-search-forward
     '';
   };
+
+
+programs.nu = {
+    enable = true;
+    enableCompletion
+shellAliases = myAliases;
+
+
+    }
+
 
   programs.bash = {
     enable = true;
@@ -69,7 +77,7 @@ in
     fastfetch
     bun yarn pnpm deno
     oh-my-zsh
-    oh-my-posh
+
     fzf
     zinit
   ];
