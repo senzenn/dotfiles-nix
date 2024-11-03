@@ -46,8 +46,6 @@ in
 
 programs.nu = {
     enable = true;
-    enableCompletion
-shellAliases = myAliases;
 
 
     }
