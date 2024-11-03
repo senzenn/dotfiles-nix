@@ -20,14 +20,6 @@ let
 in
 {
 
-  # Set Nu Shell as the default shell
-  programs.nu = {
-    enable = true;
-    default = true;  # Make Nu the default shell
-    initExtra = ''
-      # Optional: Any additional initialization for Nu Shell
-    '';
-  };
 
   programs.zsh = {
     enable = true;
@@ -46,15 +38,6 @@ in
       [ $TERM = "dumb" ] && unsetopt zle && PS1='$ '
       bindkey '^P' history-beginning-search-backward
       bindkey '^N' history-beginning-search-forward
-    '';
-  };
-
-  programs.starship = {
-    enable = true;
-    theme = "nord";
-    initExtra = ''
-      # Zoxide initialization
-      eval "$(zoxide init starship)"
     '';
   };
 
@@ -81,6 +64,8 @@ in
     oh-my-zsh
     fzf
     zinit
+    zsh-powerlevel10k
+
   ];
 
   programs.direnv.enable = true;
