@@ -92,6 +92,7 @@ in
       general {
         layout = master
         border_size = 5
+
 col.active_border = 0xff'' + config.lib.stylix.colors.base08 + ''
 
 col.inactive_border = 0xff'' + config.lib.stylix.colors.base02 + ''
