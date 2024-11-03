@@ -1,8 +1,8 @@
+
 { pkgs, ... }:
 let
 
   myAliases = {
-
     gaa = "git add .";
     gc = "git commit -m";
     gp = "git push";
@@ -20,10 +20,17 @@ let
 in
 {
 
+  # Set Nu Shell as the default shell
+  programs.nu = {
+    enable = true;
+    default = true;  # Make Nu the default shell
+    initExtra = ''
+      # Optional: Any additional initialization for Nu Shell
+    '';
+  };
+
   programs.zsh = {
     enable = true;
-
-
     enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
     enableCompletion = true;
@@ -33,7 +40,6 @@ in
       # Zoxide initialization
       eval "$(zoxide init zsh)"
       
-
       PROMPT=" ◉ %U%F{magenta}%n%f%u@%U%F{blue}%m%f%u:%F{yellow}%~%f
        %F{green}→%f "
       RPROMPT="%F{red}▂%f%F{yellow}▄%f%F{green}▆%f%F{cyan}█%f%F{blue}▆%f%F{magenta}▄%f%F{white}▂%f"
@@ -43,22 +49,14 @@ in
     '';
   };
 
-
-programs.nu = {
-    enable = true;
-
-
-    };
-programs.starship = {
+  programs.starship = {
     enable = true;
     theme = "nord";
     initExtra = ''
       # Zoxide initialization
       eval "$(zoxide init starship)"
-      
     '';
   };
-  
 
   programs.bash = {
     enable = true;
@@ -68,9 +66,6 @@ programs.starship = {
     initExtra = ''
       # Zoxide initialization
       eval "$(zoxide init bash)"
-      
-
-
     '';
   };
 
@@ -84,17 +79,11 @@ programs.starship = {
     fastfetch
     bun yarn pnpm deno
     oh-my-zsh
-
     fzf
     zinit
   ];
-     
-  
-   
-           
 
   programs.direnv.enable = true;
   programs.direnv.enableZshIntegration = true;
   programs.direnv.nix-direnv.enable = true;
 }
-
