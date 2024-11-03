@@ -32,7 +32,7 @@
 
   # Read the changelog before changing this value
   system.stateVersion = "23.11";
-
+ 
   # Set up nix for flakes
   nix.extraOptions = ''
     experimental-features = nix-command flakes
