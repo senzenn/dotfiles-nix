@@ -33,12 +33,18 @@ figlet
 spotify
 python3
 pipenv
+    podman
 nodejs
+    go
 
- # solana 
+ # dev
+ podman-desktop
+ postman
+ insomnia
+ grpc
+ toxiproxy
 
- solana-cli
- anchor
+
   ];
 
   xdg.enable = true;
