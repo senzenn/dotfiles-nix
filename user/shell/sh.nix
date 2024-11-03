@@ -71,6 +71,7 @@ in
     oh-my-zsh
     oh-my-posh
     fzf
+    zinit
   ];
      
   
