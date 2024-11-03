@@ -23,6 +23,7 @@
     nmap
     
     luajitPackages.luarocks-nix
+    lua
    
   ];
   programs.neovim = {
