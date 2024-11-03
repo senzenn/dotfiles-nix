@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
 nushell
-ohmyzsh
+
     kitty
   ];
   programs.kitty.enable = true;
