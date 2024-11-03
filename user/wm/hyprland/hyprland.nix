@@ -399,6 +399,10 @@ in
   };
 
   home.packages = (with pkgs; [
+  cmake 
+  meson
+  cpio
+
     alacritty
     kitty
     feh
@@ -543,7 +547,7 @@ in
       border-style: none;
     }
 
-    #box {
+    box {
       /* Define attributes of the box surrounding icons here */
       padding: 10px;
       background: rgba(''+config.lib.stylix.colors.base00-rgb-r+'',''+config.lib.stylix.colors.base00-rgb-g+'',''+config.lib.stylix.colors.base00-rgb-b+'',0.22);

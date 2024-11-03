@@ -54,8 +54,8 @@ in
       # Zoxide initialization
       eval "$(zoxide init bash)"
       
-      # Oh My Posh initialization
-      eval "$(oh-my-posh init bash --config $HOME/.config/poshthemes/theme.json)"
+
+
     '';
   };
 
@@ -76,7 +76,7 @@ in
   
    
            
-
+programs.oh-my-zsh.enable = true;
   programs.direnv.enable = true;
   programs.direnv.enableZshIntegration = true;
   programs.direnv.nix-direnv.enable = true;
