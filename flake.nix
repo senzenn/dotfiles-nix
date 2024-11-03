@@ -28,7 +28,7 @@
         # window manager type (hyprland or x11) translator
         wmType = if ((wm == "hyprland") || (wm == "plasma")) then "wayland" else "x11";
         browser = "brave"; # Default browser; must select one from ./user/app/browser/
-        spawnBrowser = if ((browser == "qutebrowser") && (wm == "hyprland")) then "qutebrowser-hyprprofile" else (if (browser == "qutebrowser") then "qutebrowser --qt-flag enable-gpu-rasterization --qt-flag enable-native-gpu-memory-buffers --qt-flag num-raster-threads=4" else browser); # Browser spawn command must be specail for qb, since it doesn't gpu accelerate by default (why?)
+        spawnBrowser = if ((browser == "brave") && (wm == "hyprland")) then "qutebrowser-hyprprofile" else (if (browser == "qutebrowser") then "qutebrowser --qt-flag enable-gpu-rasterization --qt-flag enable-native-gpu-memory-buffers --qt-flag num-raster-threads=4" else browser); # Browser spawn command must be specail for qb, since it doesn't gpu accelerate by default (why?)
         defaultRoamDir = "Personal.p"; # Default org roam directory relative to ~/Org
         term = "kitty"; # Default terminal command;
         font = "JetBrains Mono Nerd"; # Selected font
