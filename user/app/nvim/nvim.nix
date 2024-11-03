@@ -22,7 +22,7 @@
     sqls
     nmap
     lua
-    luajit
+   
   ];
   programs.neovim = {
     viAlias = true;
