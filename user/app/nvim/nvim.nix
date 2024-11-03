@@ -21,7 +21,8 @@
     yaml-language-server
     sqls
     nmap
-    lua
+    
+    luajitPackages.luarocks-nix
    
   ];
   programs.neovim = {
