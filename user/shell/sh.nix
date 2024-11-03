@@ -48,8 +48,17 @@ programs.nu = {
     enable = true;
 
 
-    }
-
+    };
+programs.starship = {
+    enable = true;
+    theme = "nord";
+    initExtra = ''
+      # Zoxide initialization
+      eval "$(zoxide init starship)"
+      
+    '';
+  };
+  
 
   programs.bash = {
     enable = true;
