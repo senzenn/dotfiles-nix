@@ -147,7 +147,7 @@ in
     starship
     rustup  # For Solana development (Rust)
     cargo  # Package manager for Rust
-    solana  # Solana CLI
+anchor
     docker  # Docker for containerized environments
     nodejs  # Node.js for backend development
     python3  # Python for backend development
