@@ -53,6 +53,10 @@ in
 
       # Starship initialization
       eval "$(starship init bash)"
+
+
+      eval "$(zinit init zsh)"
+
     '';
   };
 
@@ -69,11 +73,10 @@ in
     fzf
     zinit
     oh-my-posh
-    starship  # Ensure Starship is installed
+    starship  
+
   ];
 
-  # Create the configuration file for Starship
-  # The path is set as `~/.config/starship.toml`
 
 
   programs.direnv.enable = true;

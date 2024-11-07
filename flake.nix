@@ -22,13 +22,13 @@
         name = "SpiderMonkey"; # name/identifier
         email = "ascenzen11@gmail.com"; # email (used for certain configurations)
         dotfilesDir = "/home/spidermonkey/.dotfiles"; # absolute path of the local repo
-        theme = "spaceduck"; # selcted theme from my themes directory (./themes/)
+        theme = "io"; # selcted theme from my themes directory (./themes/)
         # blue theme = "outrun-dark"; # selcted theme from my themes directory (./themes/)
         wm = "hyprland"; # Selected window manager or desktop environment; must select one in both ./user/wm/ and ./system/wm/
         # window manager type (hyprland or x11) translator
         wmType = if ((wm == "hyprland") || (wm == "plasma")) then "wayland" else "x11";
         browser = "brave"; # Default browser; must select one from ./user/app/browser/
-        spawnBrowser = if ((browser == "brave") && (wm == "hyprland")) then "qutebrowser-hyprprofile" else (if (browser == "qutebrowser") then "qutebrowser --qt-flag enable-gpu-rasterization --qt-flag enable-native-gpu-memory-buffers --qt-flag num-raster-threads=4" else browser); # Browser spawn command must be specail for qb, since it doesn't gpu accelerate by default (why?)
+        spawnBrowser = if ((browser == "brave") && (wm == "hyprland")) then "brave" else (if (browser == "brave") then "brave --qt-flag enable-gpu-rasterization --qt-flag enable-native-gpu-memory-buffers --qt-flag num-raster-threads=4" else browser); # Browser spawn command must be specail for qb, since it doesn't gpu accelerate by default (why?)
         defaultRoamDir = "Personal.p"; # Default org roam directory relative to ~/Org
         term = "kitty"; # Default terminal command;
         font = "JetBrains Mono Nerd"; # Selected font
