@@ -1,7 +1,6 @@
 
 { pkgs, ... }:
 let
-
   myAliases = {
     gaa = "git add .";
     gc = "git commit -m";
@@ -15,12 +14,11 @@ let
     fetch = "disfetch";
     gitfetch = "onefetch";
     "," = "comma";
-    dog =  "phoenix sync user";
+    dog = "phoenix sync user";
   };
 
 in
 {
-
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
@@ -33,10 +31,12 @@ in
       eval "$(zoxide init zsh)"
       
       # Starship initialization
-      eval "$(starship int zsh)"
-      eval "$(zinit init zsh)"
+      eval "$(starship init zsh)"
+
+      # Optional: Uncomment this if using oh-my-zsh
       # eval "$(oh-my-zsh init -)"
 
+      # Key bindings
       bindkey '^P' history-beginning-search-backward
       bindkey '^N' history-beginning-search-forward
     '';
@@ -53,31 +53,37 @@ in
 
       # Starship initialization
       eval "$(starship init bash)"
-
-
-      eval "$(zinit init zsh)"
-
     '';
   };
 
   home.packages = with pkgs; [
-    disfetch lolcat cowsay onefetch
-    gnugrep gnused
-    bat eza bottom fd bc
-    direnv nix-direnv
-    neofetch zsh-z
+    disfetch
+    lolcat
+    cowsay
+    onefetch
+    gnugrep
+    gnused
+    bat
+    eza
+    bottom
+    fd
+    bc
+    direnv
+    nix-direnv
+    neofetch
+    zsh-z
     zoxide
     fastfetch
-    bun yarn pnpm deno
+    bun
+    yarn
+    pnpm
+    deno
     oh-my-zsh
     fzf
     zinit
     oh-my-posh
-    starship  
-
+    starship
   ];
-
-
 
   programs.direnv.enable = true;
   programs.direnv.enableZshIntegration = true;
