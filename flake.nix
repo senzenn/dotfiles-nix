@@ -22,7 +22,7 @@
         name = "SpiderMonkey"; # name/identifier
         email = "ascenzen11@gmail.com"; # email (used for certain configurations)
         dotfilesDir = "/home/spidermonkey/.dotfiles"; # absolute path of the local repo
-        theme = "ember"; # selcted theme from my themes directory (./themes/)
+        theme = "gruvbox-dark-hard"; # selcted theme from my themes directory (./themes/)
         # blue theme = "outrun-dark"; # selcted theme from my themes directory (./themes/)
         wm = "hyprland"; # Selected window manager or desktop environment; must select one in both ./user/wm/ and ./system/wm/
         # window manager type (hyprland or x11) translator

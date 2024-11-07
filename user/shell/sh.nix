@@ -147,6 +147,7 @@ in
     oh-my-posh
     starship
     rustup  # For Solana development (Rust)
+mongodb-compass
 
 
 
