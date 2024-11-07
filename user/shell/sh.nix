@@ -17,9 +17,9 @@ let
     "," = "comma";
     dog =  "phoenix sync user";
   };
+
 in
 {
-
 
   programs.zsh = {
     enable = true;
@@ -32,6 +32,9 @@ in
       # Zoxide initialization
       eval "$(zoxide init zsh)"
       
+      # Starship initialization
+      eval "$(starship init zsh)"
+
       PROMPT=" ◉ %U%F{magenta}%n%f%u@%U%F{blue}%m%f%u:%F{yellow}%~%f
        %F{green}→%f "
       RPROMPT="%F{red}▂%f%F{yellow}▄%f%F{green}▆%f%F{cyan}█%f%F{blue}▆%f%F{magenta}▄%f%F{white}▂%f"
@@ -41,7 +44,6 @@ in
     '';
   };
 
-
   programs.bash = {
     enable = true;
     enableCompletion = true;
@@ -50,6 +52,9 @@ in
     initExtra = ''
       # Zoxide initialization
       eval "$(zoxide init bash)"
+
+      # Starship initialization
+      eval "$(starship init bash)"
     '';
   };
 
@@ -65,8 +70,16 @@ in
     oh-my-zsh
     fzf
     zinit
-oh-my-posh
+    oh-my-posh
+    starship  # Ensure Starship is installed
   ];
+
+  # Create the configuration file for Starship
+  # The path is set as `~/.config/starship.toml`
+  home.file."${config.home.homeDirectory}/.config/starship.toml" = {
+    source = ./starship.toml;  # Source file that contains your Starship config
+    createDirs = true;
+  };
 
   programs.direnv.enable = true;
   programs.direnv.enableZshIntegration = true;
