@@ -15,6 +15,7 @@ let
     gitfetch = "onefetch";
     "," = "comma";
     dog = "phoenix sync user";
+    nn = "neovide .";
   };
 
   # Custom starship config for full-stack dev + Solana dev
@@ -151,9 +152,7 @@ anchor
     docker  # Docker for containerized environments
     nodejs  # Node.js for backend development
     python3  # Python for backend development
-    npm  # Node package manager
     jq  # JSON processing tool (common in backend)
-    terraform  # If using Terraform for infrastructure
   ];
 
   programs.direnv.enable = true;
