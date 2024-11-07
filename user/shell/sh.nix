@@ -76,10 +76,7 @@ in
 
   # Create the configuration file for Starship
   # The path is set as `~/.config/starship.toml`
-  home.file."${config.home.homeDirectory}/.config/starship.toml" = {
-    source = ./starship.toml;  # Source file that contains your Starship config
-    createDirs = true;
-  };
+
 
   programs.direnv.enable = true;
   programs.direnv.enableZshIntegration = true;
