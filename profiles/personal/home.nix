@@ -47,6 +47,7 @@ nodejs
     oh-my-zsh
     oh-my-posh
     fzf-zsh
+    sway
 
   ];
 
