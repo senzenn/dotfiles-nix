@@ -17,6 +17,68 @@ let
     dog = "phoenix sync user";
   };
 
+  # Custom starship config for full-stack dev + Solana dev
+  starshipConfig = ''
+    # Git Status Module
+    [git_status]
+    format = "([[$all_status]] )"
+
+    # Node.js Version
+    [nodejs]
+    format = "[$version]($style)"
+    style = "cyan"
+
+    # Docker Module (if you're using Docker)
+    [docker]
+    symbol = "🐳 "
+    format = "[$symbol$container_name]($style) "
+    style = "yellow"
+
+    # Rust for Solana (check if you're using rust toolchain)
+    [rust]
+    format = "[$version]($style)"
+    style = "red"
+
+    # Python (in case your backend uses Python/Django/Flask)
+    [python]
+    format = "[$version]($style)"
+    style = "green"
+
+    # JavaScript (for Node.js-based services)
+    [javascript]
+    format = "[$version]($style)"
+    style = "purple"
+
+    # Virtualenv (for Python environments)
+    [python.virtualenv]
+    format = "[$virtualenv]($style)"
+    style = "yellow"
+
+    # FZF (fuzzy search)
+    [fzf]
+    style = "blue"
+
+    # NPM (for Node.js projects)
+    [npm]
+    format = "[$symbol$version]($style)"
+    style = "yellow"
+
+    # Solana (CLI tools)
+    [solana]
+    symbol = "🚀"
+    format = "[$symbol$cluster]($style)"
+    style = "magenta"
+
+    # Custom directory for Solana dev
+    [directory]
+    style = "bold green"
+
+    # Add custom prompt symbol
+    [character]
+    success_symbol = "[➜]($style)"
+    error_symbol = "[✗]($style)"
+  '';
+
 in
 {
   programs.zsh = {
@@ -29,7 +91,7 @@ in
     initExtra = ''
       # Zoxide initialization
       eval "$(zoxide init zsh)"
-      
+
       # Starship initialization
       eval "$(starship init zsh)"
 
@@ -83,6 +145,15 @@ in
     zinit
     oh-my-posh
     starship
+    rustup  # For Solana development (Rust)
+    cargo  # Package manager for Rust
+    solana  # Solana CLI
+    docker  # Docker for containerized environments
+    nodejs  # Node.js for backend development
+    python3  # Python for backend development
+    npm  # Node package manager
+    jq  # JSON processing tool (common in backend)
+    terraform  # If using Terraform for infrastructure
   ];
 
   programs.direnv.enable = true;
