@@ -154,7 +154,8 @@ mongodb-compass
     nodejs  # Node.js for backend development
     python3  # Python for backend development
     jq  # JSON processing tool (common in backend)
-notion-app-enhanced
+notion-app-enhanced # Notion app 
+ansible
   ];
 
   programs.direnv.enable = true;
