@@ -146,8 +146,10 @@ in
     zinit
     oh-my-posh
     starship
+    
     rustup  # For Solana development (Rust)
 mongodb-compass
+telegram-desktop
 
 
 
