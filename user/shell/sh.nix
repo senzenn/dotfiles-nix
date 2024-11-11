@@ -151,7 +151,7 @@ in
 mongodb-compass
 telegram-desktop
 
-obsdian
+obsidian
 
     nodejs  # Node.js for backend development
     python3  # Python for backend development
