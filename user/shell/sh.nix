@@ -158,6 +158,8 @@ obsidian
     jq  # JSON processing tool (common in backend)
 notion-app-enhanced # Notion app 
 ansible
+slack 
+tree
   ];
 
   programs.direnv.enable = true;
