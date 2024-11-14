@@ -160,6 +160,7 @@ notion-app-enhanced # Notion app
 ansible
 slack 
 tree
+wpsoffice
   ];
 
   programs.direnv.enable = true;
