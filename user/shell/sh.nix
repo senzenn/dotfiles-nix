@@ -163,9 +163,11 @@ tree
 
 
 #  do not expose yourself 
- webstorm
- rust-rover
- goland
+
+ jetbrains.webstorm
+ jetbrains.rust-rover
+jetbrains.goland
+
   ];
 
   programs.direnv.enable = true;
