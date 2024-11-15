@@ -161,6 +161,11 @@ ansible
 slack 
 tree
 
+
+#  do not expose yourself 
+ webstorm
+ rust-rover
+ goland
   ];
 
   programs.direnv.enable = true;
