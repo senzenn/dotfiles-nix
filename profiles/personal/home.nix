@@ -13,7 +13,7 @@
 
             ];
 
-  home.stateVersion = "22.11"; # Please read the comment before changing.
+  home.stateVersion = "24.05"; # Please read the comment before changing.
 
   home.packages = with pkgs; [
 
@@ -25,6 +25,7 @@
     syncthing
     zellij
     vscode
+    gnomeExtensions.wifi-qrcode
 tmux
 vesktop
 btop
@@ -44,6 +45,8 @@ nodejs
  grpc
  toxiproxy
 
+ollama
+aichat # ai chats in termianl 
     oh-my-zsh
     oh-my-posh
     fzf-zsh

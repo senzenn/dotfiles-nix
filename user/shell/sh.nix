@@ -160,7 +160,8 @@ notion-app-enhanced # Notion app
 ansible
 slack 
 tree
-
+telegram-bot-api 
+swayfx-unwrapped
 
 #  do not expose yourself 
 
@@ -168,6 +169,19 @@ tree
  jetbrains.rust-rover
 jetbrains.goland
 
+
+
+
+
+#crypto 
+crypto-tracker
+crypto-org-wallet
+crypto-tracker
+botan3 # crypto library
+erlang # realtime 
+erlang-ls
+
+elixir
   ];
 
   programs.direnv.enable = true;
