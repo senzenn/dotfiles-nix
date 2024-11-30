@@ -146,6 +146,6 @@
   };
 
   # It is ok to leave this unchanged for compatibility purposes
-  system.stateVersion = "22.11";
+  system.stateVersion = "24.11";
 
 }

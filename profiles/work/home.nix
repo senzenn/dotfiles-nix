@@ -28,8 +28,8 @@
               ../../user/hardware/bluetooth.nix # Bluetooth
             ];
 
-  home.stateVersion = "22.11"; # Please read the comment before changing.
-
+  home.stateVersion = "24.11"; # Please read the comment before changing.
+ doCheck = !stdenv.isDarwin;
   home.packages = (with pkgs; [
     # Core
     zsh
