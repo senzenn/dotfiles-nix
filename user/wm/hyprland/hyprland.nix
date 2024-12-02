@@ -66,36 +66,26 @@ in
       bezier = liner, 1, 1, 1, 1
       bezier = linear, 0.0, 0.0, 1.0, 1.0
 
-
-
-# ▄▀█ █▄░█ █ █▀▄▀█ ▄▀█ ▀█▀ █ █▀█ █▄░█
-# █▀█ █░▀█ █ █░▀░█ █▀█ ░█░ █ █▄█ █░▀█
-
-
-     animations {
-    enabled = yes
-    bezier = wind, 0.05, 0.9, 0.1, 1.05
-    bezier = winIn, 0.1, 1.1, 0.1, 1.1
-    bezier = winOut, 0.3, -0.3, 0, 1
-    bezier = liner, 1, 1, 1, 1
-    animation = windows, 1, 6, wind, slide
-    animation = windowsIn, 1, 6, winIn, slide
-    animation = windowsOut, 1, 5, winOut, slide
-    animation = windowsMove, 1, 5, wind, slide
-    animation = border, 1, 1, liner
-    animation = borderangle, 1, 30, liner, loop
-    animation = fade, 1, 10, default
-    animation = workspaces, 1, 5, wind
-}
-
+      animations {
+           enabled = yes
+           animation = windowsIn, 1, 6, winIn, popin
+           animation = windowsOut, 1, 5, winOut, popin
+           animation = windowsMove, 1, 5, wind, slide
+           animation = border, 1, 10, default
+           animation = borderangle, 1, 100, linear, loop
+           animation = fade, 1, 10, default
+           animation = workspaces, 1, 5, wind
+           animation = windows, 1, 6, wind, slide
+           animation = specialWorkspace, 1, 6, default, slidefadevert -50%
+      }
 
       general {
         layout = master
         border_size = 5
+        col.active_border = 0xff'' + config.lib.stylix.colors.base08 + " " + ''0xff'' + config.lib.stylix.colors.base09 + " " + ''0xff'' + config.lib.stylix.colors.base0A + " " + ''0xff'' + config.lib.stylix.colors.base0B + " " + ''0xff'' + config.lib.stylix.colors.base0C + " " + ''0xff'' + config.lib.stylix.colors.base0D + " " + ''0xff'' + config.lib.stylix.colors.base0E + " " + ''0xff'' + config.lib.stylix.colors.base0F + " " + ''270deg
 
-col.active_border = 0xff'' + config.lib.stylix.colors.base08 + ''
+        col.inactive_border = 0xaa'' + config.lib.stylix.colors.base02 + ''
 
-col.inactive_border = 0xff'' + config.lib.stylix.colors.base02 + ''
             resize_on_border = true
             gaps_in = 7
             gaps_out = 7
@@ -182,7 +172,6 @@ col.inactive_border = 0xff'' + config.lib.stylix.colors.base02 + ''
        bind=SUPER,J,movefocus,d
        bind=SUPER,K,movefocus,u
        bind=SUPER,L,movefocus,r
-       
 
        bind=SUPERSHIFT,H,movewindow,l
        bind=SUPERSHIFT,J,movewindow,d
@@ -399,10 +388,6 @@ col.inactive_border = 0xff'' + config.lib.stylix.colors.base02 + ''
   };
 
   home.packages = (with pkgs; [
-  cmake 
-  meson
-  cpio
-
     alacritty
     kitty
     feh
@@ -540,17 +525,17 @@ col.inactive_border = 0xff'' + config.lib.stylix.colors.base02 + ''
   home.file.".config/nwg-dock-hyprland/style.css".text = ''
     window {
       background: rgba(''+config.lib.stylix.colors.base00-rgb-r+'',''+config.lib.stylix.colors.base00-rgb-g+'',''+config.lib.stylix.colors.base00-rgb-b+'',0.0);
-      border-radius: 10px;
+      border-radius: 20px;
       padding: 4px;
       margin-left: 4px;
       margin-right: 4px;
       border-style: none;
     }
 
-    box {
+    #box {
       /* Define attributes of the box surrounding icons here */
       padding: 10px;
-      background: rgba(''+config.lib.stylix.colors.base00-rgb-r+'',''+config.lib.stylix.colors.base00-rgb-g+'',''+config.lib.stylix.colors.base00-rgb-b+'',0.22);
+      background: rgba(''+config.lib.stylix.colors.base00-rgb-r+'',''+config.lib.stylix.colors.base00-rgb-g+'',''+config.lib.stylix.colors.base00-rgb-b+'',0.55);
       border-radius: 20px;
       padding: 4px;
       margin-left: 4px;
@@ -647,7 +632,7 @@ col.inactive_border = 0xff'' + config.lib.stylix.colors.base02 + ''
 
     input-field {
       monitor =
-      size = 200, 30
+      size = 200, 50
       outline_thickness = 3
       dots_size = 0.33 # Scale of input-field height, 0.2 - 0.8
       dots_spacing = 0.15 # Scale of dots' absolute size, 0.0 - 1.0
@@ -678,7 +663,7 @@ col.inactive_border = 0xff'' + config.lib.stylix.colors.base02 + ''
 
     label {
       monitor =
-      text = Hello, Spider Monkey 🤭
+      text = Hello, Emmet
       color = rgb(''+config.lib.stylix.colors.base07-rgb-r+'',''+config.lib.stylix.colors.base07-rgb-g+'', ''+config.lib.stylix.colors.base07-rgb-b+'')
       font_size = 25
       font_family = ''+userSettings.font+''
@@ -968,7 +953,7 @@ col.inactive_border = 0xff'' + config.lib.stylix.colors.base02 + ''
 
       window#waybar {
           background-color: rgba('' + config.lib.stylix.colors.base00-rgb-r + "," + config.lib.stylix.colors.base00-rgb-g + "," + config.lib.stylix.colors.base00-rgb-b + "," + ''0.55);
-          border-radius: 3px;
+          border-radius: 8px;
           color: #'' + config.lib.stylix.colors.base07 + '';
           transition-property: background-color;
           transition-duration: .2s;

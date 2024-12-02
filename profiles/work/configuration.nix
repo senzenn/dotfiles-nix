@@ -14,7 +14,7 @@
       ../../system/hardware/printing.nix
       ../../system/hardware/bluetooth.nix
       (./. + "../../../system/wm"+("/"+userSettings.wm)+".nix") # My window manager
-      ../../system/app/flatpak.nix
+      #../../system/app/flatpak.nix
       ../../system/app/virtualization.nix
       ( import ../../system/app/docker.nix {storageDriver = null; inherit pkgs userSettings lib;} )
       ../../system/security/doas.nix
@@ -106,8 +106,6 @@
 
   # System packages
   environment.systemPackages = with pkgs; [
-  nginx
-  vscode
     vim
     logseq
     wget
@@ -146,6 +144,6 @@
   };
 
   # It is ok to leave this unchanged for compatibility purposes
-  system.stateVersion = "24.11";
+  system.stateVersion = "22.11";
 
 }

@@ -3,15 +3,8 @@
   # Collection of useful CLI apps
   home.packages = with pkgs; [
     # Command Line
-zsh-history
-
-    zsh-f-sy-h
-    zsh-autopair
-    starship
     disfetch lolcat cowsay
     starfetch
-    starship
-
     cava
     killall
     libnotify
@@ -24,9 +17,25 @@ zsh-history
     w3m
     pandoc
     hwinfo
-    lazygit
     pciutils
+    lua54Packages.luarocks
     numbat
+    lua
+    nix
+    deno
+
+
+# rust cli
+rustycli
+rustywind
+rustlings
+rustypaste
+
+
+    # Solana Dev
+    solana-cli
+    solana-validator
+    anchor
     (pkgs.callPackage ../pkgs/pokemon-colorscripts.nix { })
     (pkgs.writeShellScriptBin "airplane-mode" ''
       #!/bin/sh

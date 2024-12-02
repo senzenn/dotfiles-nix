@@ -76,6 +76,5 @@
       wcwidth
       websockets
       python-zbar
-      python312Packages.pyqt6
   ];
 }

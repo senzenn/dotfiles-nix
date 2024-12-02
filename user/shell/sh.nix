@@ -1,4 +1,5 @@
 
+
 { pkgs, ... }:
 let
   myAliases = {
@@ -161,7 +162,7 @@ ansible
 slack 
 tree
 telegram-bot-api 
-swayfx-unwrapped
+
 
 #  do not expose yourself 
 

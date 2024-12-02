@@ -2,7 +2,6 @@
 
 {
   home.packages = with pkgs; [
-
     neovim
     neovim-remote
     neovide
@@ -21,10 +20,6 @@
     yaml-language-server
     sqls
     nmap
-    
-    luajitPackages.luarocks-nix
-    lua
-   
   ];
   programs.neovim = {
     viAlias = true;
@@ -32,5 +27,8 @@
   };
   home.file.".config/nvim".source = ./.;
   home.file.".config/nvim".recursive = true;
-
+  home.file.".config/nvim/lua/themes/stylix.lua".source = config.lib.stylix.colors {
+      template = builtins.readFile ./lua/themes/stylix.lua.mustache;
+      extension = ".lua";
+  };
 }
