@@ -32,7 +32,7 @@ rustlings
 rustypaste
 # Solana Dev
 solana-cli
-solana-validator
+
 anchor
 (pkgs.callPackage ../pkgs/pokemon-colorscripts.nix { })
     (pkgs.writeShellScriptBin "airplane-mode" ''
