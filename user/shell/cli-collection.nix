@@ -22,7 +22,7 @@
     pciutils
     lua54Packages.luarocks
     numbat
-    lua
+    lua_5_1
     nix
     deno
 
