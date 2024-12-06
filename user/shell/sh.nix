@@ -166,7 +166,7 @@ gparted
 lazygit
 
 #  do not expose yourself 
-
+cursor
  jetbrains.webstorm
  jetbrains.rust-rover
 jetbrains.goland
