@@ -162,7 +162,8 @@ ansible
 slack 
 tree
 telegram-bot-api 
-
+gparted
+lazygit
 
 #  do not expose yourself 
 
