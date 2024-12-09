@@ -22,7 +22,7 @@ lazygit
     pciutils
     lua54Packages.luarocks
     numbat
-    lua_5_1
+
     nix
     deno
 
