@@ -4,7 +4,7 @@
   home.packages = with pkgs; [
     # Command Line
     disfetch lolcat cowsay
-    
+lazygit    
     xclip
     starfetch
     cava
