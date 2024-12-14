@@ -7,6 +7,13 @@ let
     gc = "git commit -m";
     gp = "git push";
     ls = "eza --icons -l -T -L=1";
+    gl="git pull origin main";
+    gcm ="git checkout main";\
+gba="git branch";
+    gcp = "git cherry-pick";
+    glgg = "git log --graph --max-count=10"
+      gm="git merge";
+
     cat = "bat";
     htop = "btm";
     fd = "fd -Lu";
@@ -17,6 +24,9 @@ let
     "," = "comma";
     dog = "phoenix sync user";
     nn = "neovide .";
+    ggpull="git pull origin $(current_branch)";
+alias ggpush="git push origin $(current_branch)" 
+
   };
 
   # Custom starship config for full-stack dev + Solana dev
