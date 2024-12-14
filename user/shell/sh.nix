@@ -8,7 +8,7 @@ let
     gp = "git push";
     ls = "eza --icons -l -T -L=1";
     gl="git pull origin main";
-    gcm ="git checkout main";\
+    gcm ="git checkout main";
 gba="git branch";
     gcp = "git cherry-pick";
     glgg = "git log --graph --max-count=10"
