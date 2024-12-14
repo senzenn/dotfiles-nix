@@ -11,7 +11,7 @@ let
     gcm ="git checkout main";
 gba="git branch";
     gcp = "git cherry-pick";
-    glgg = "git log --graph --max-count=10"
+    glgg = "git log --graph --max-count=10";
       gm="git merge";
 
     cat = "bat";
