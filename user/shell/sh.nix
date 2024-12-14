@@ -25,7 +25,7 @@ gba="git branch";
     dog = "phoenix sync user";
     nn = "neovide .";
     ggpull="git pull origin $(current_branch)";
-alias ggpush="git push origin $(current_branch)" 
+ ggpush="git push origin $(current_branch)" ;
 
   };
 
