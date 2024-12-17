@@ -20,7 +20,6 @@
     yaml-language-server
     sqls
     nmap
-    lua
   ];
   programs.neovim = {
     viAlias = true;
