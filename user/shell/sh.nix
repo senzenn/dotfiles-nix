@@ -132,6 +132,7 @@ in
 
   home.packages = with pkgs; [
     disfetch
+    gdu
     lolcat
     cowsay
     onefetch
@@ -157,7 +158,7 @@ in
     zinit
     oh-my-posh
     starship
-    
+bottom    
     rustup  # For Solana development (Rust)
 mongodb-compass
 telegram-desktop
