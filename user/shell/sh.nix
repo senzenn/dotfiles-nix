@@ -5,6 +5,7 @@ let
   myAliases = {
     gaa = "git add .";
     gc = "git commit -m";
+  gco = "git checkout "
     gp = "git push";
     ls = "eza --icons -l -T -L=1";
     gl="git pull origin main";
@@ -185,7 +186,7 @@ jetbrains.goland
 
 
 
-
+neovide
 #crypto 
 crypto-tracker
 crypto-org-wallet
