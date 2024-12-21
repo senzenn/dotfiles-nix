@@ -1,3 +1,5 @@
+
+
 { pkgs, ... }:
 let
   myAliases = {
@@ -28,7 +30,70 @@ let
     gcb = "git checkout -b";
     gpc = "grep -r";
     gpr = "sudo grep -r /";
+
   };
+
+  # Custom starship config for full-stack dev + Solana dev
+  starshipConfig = ''
+    # Git Status Module
+    [git_status]
+    format = "([[$all_status]] )"
+
+    # Node.js Version
+    [nodejs]
+    format = "[$version]($style)"
+    style = "cyan"
+
+    # Docker Module (if you're using Docker)
+    [docker]
+    symbol = "🐳 "
+    format = "[$symbol$container_name]($style) "
+    style = "yellow"
+
+    # Rust for Solana (check if you're using rust toolchain)
+    [rust]
+    format = "[$version]($style)"
+    style = "red"
+
+    # Python (in case your backend uses Python/Django/Flask)
+    [python]
+    format = "[$version]($style)"
+    style = "green"
+
+    # JavaScript (for Node.js-based services)
+    [javascript]
+    format = "[$version]($style)"
+    style = "purple"
+
+    # Virtualenv (for Python environments)
+    [python.virtualenv]
+    format = "[$virtualenv]($style)"
+    style = "yellow"
+
+    # FZF (fuzzy search)
+    [fzf]
+    style = "blue"
+
+    # NPM (for Node.js projects)
+    [npm]
+    format = "[$symbol$version]($style)"
+    style = "yellow"
+
+    # Solana (CLI tools)
+    [solana]
+    symbol = "🚀"
+    format = "[$symbol$cluster]($style)"
+    style = "magenta"
+
+    # Custom directory for Solana dev
+    [directory]
+    style = "bold green"
+
+    # Add custom prompt symbol
+    [character]
+    success_symbol = "[➜]($style)"
+    error_symbol = "[✗]($style)"
+  '';
 
 in
 {
@@ -39,35 +104,19 @@ in
     enableCompletion = true;
     shellAliases = myAliases;
 
-    plugins = [
-      "git"
-      "zsh-autosuggestions"
-      "zsh-syntax-highlighting"
-      "zsh-completions"
-      "zsh-history-substring-search"
-      "zsh-nvm"
-      "zsh-z"
-      "zoxide"
-      "starship"
-      "ohmyzsh"
-    ];
-
-    # Key bindings for accepting autosuggestions
-    bindkey '^I' autosuggest-accept
-
-    # Set the theme to agnoster for a retro look
-    promptInit = ''
-      autoload -U promptinit; promptinit
-      prompt agnoster
-    '';
-
-    # Oh My Zsh configuration
     initExtra = ''
-      # Load Oh My Zsh
-      export ZSH="$HOME/.oh-my-zsh"
-      ZSH_THEME="agnoster"
-      plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-completions zsh-history-substring-search zsh-nvm zsh-z zoxide starship)
-      source $ZSH/oh-my-zsh.sh
+      # Zoxide initialization
+      eval "$(zoxide init zsh)"
+
+      # Starship initialization
+      eval "$(starship init zsh)"
+
+      # Optional: Uncomment this if using oh-my-zsh
+      # eval "$(oh-my-zsh init -)"
+
+      # Key bindings
+      bindkey '^P' history-beginning-search-backward
+      bindkey '^N' history-beginning-search-forward
     '';
   };
 
@@ -113,31 +162,43 @@ in
     zinit
     oh-my-posh
     starship
+bottom    
     rustup  # For Solana development (Rust)
-    mongodb-compass
-    telegram-desktop
-    obsidian
+mongodb-compass
+telegram-desktop
+
+obsidian
+
     nodejs  # Node.js for backend development
     python3  # Python for backend development
     jq  # JSON processing tool (common in backend)
-    notion-app-enhanced # Notion app 
-    ansible
-    slack 
-    tree
-    telegram-bot-api 
-    gparted
-    lazygit
-    jetbrains.webstorm
-    jetbrains.rust-rover
-    jetbrains.goland
-    neovide
-    crypto-tracker
-    crypto-org-wallet
-    botan3 # crypto library
-    erlang # realtime 
-    erlang-ls
-    firefox 
-    elixir
+notion-app-enhanced # Notion app 
+ansible
+slack 
+tree
+telegram-bot-api 
+gparted
+lazygit
+
+#  do not expose yourself 
+
+ jetbrains.webstorm
+ jetbrains.rust-rover
+jetbrains.goland
+
+
+
+
+neovide
+#crypto 
+crypto-tracker
+crypto-org-wallet
+crypto-tracker
+botan3 # crypto library
+erlang # realtime 
+erlang-ls
+
+elixir
   ];
 
   programs.direnv.enable = true;
