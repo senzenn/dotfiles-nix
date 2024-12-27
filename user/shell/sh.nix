@@ -155,6 +155,9 @@ in
     fastfetch
     bun
     yarn
+
+    typescript 
+firefox
     pnpm
     deno
     oh-my-zsh
